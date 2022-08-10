@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node src/index.ts",
     "test": "node node_modules/jest/bin/jest.js --maxWorkers=15% --logHeapUsage",
     "test:watch": "node ./node_modules/.bin/jest --maxWorkers=25% --logHeapUsag --watch",
     "lint": "eslint \"{src,apps,libs,test}/**/*.tsx\" --fix",
