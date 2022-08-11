@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { UserResponse } from './models/user';
 import { UserService } from './user.service';
 import { Errors } from '../../types/errors';
+import { returnWantedValues } from './utils/filters';
 
 const router = Router();
 const userService = new UserService();
@@ -10,7 +11,10 @@ router.get('/users', async function (req, res) {
   const errors: Array<Errors> = [];
   try {
     const usersAndTasks: Array<UserResponse> | null =
-      await userService.getUsers('https://jsonplaceholder.typicode.com/users/');
+      await userService.getUsers(
+        'https://jsonplaceholder.typicode.com/users/',
+        returnWantedValues,
+      );
 
     // catching the errors
     if (!usersAndTasks) errors.push({ message: "Couldn't get users" });
