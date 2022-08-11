@@ -11,7 +11,7 @@ export function returnUsersWithTasks(
     delete user.address;
     delete user.website;
     for (const tIndex in tasks) {
-      if (user.id == tasks[tIndex].userId) {
+      if (user.id == tasks[tIndex].userId && tasks[tIndex].completed) {
         if (user.tasks != undefined)
           user.tasks.push({
             id: tasks[tIndex].id,
