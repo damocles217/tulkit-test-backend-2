@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "node node_modules/jest/bin/jest.js --maxWorkers=15% --logHeapUsage --silent",
+    "test": "node node_modules/jest/bin/jest.js --maxWorkers=15% --logHeapUsage ",
     "test:watch": "node ./node_modules/.bin/jest --maxWorkers=25% --logHeapUsage --watch --silent",
     "lint": "eslint \"{src,apps,libs,test}/**/*.tsx\" --fix",
     "format": "prettier --write \"src/**/*.tsx\" "

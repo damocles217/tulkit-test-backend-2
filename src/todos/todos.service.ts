@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { UserRequest, UserResponse } from './models/user';
+import { TaskRequest, TaskResponse } from './models/task';
 
-export class UserService {
-  async getUsers(
+export class TodoService {
+  async getTodos(
     url: string,
-  ): Promise<Array<UserRequest & UserResponse> | null> {
+  ): Promise<Array<TaskRequest & TaskResponse> | null> {
     try {
       const response = await axios.get(url);
       return response.data;
