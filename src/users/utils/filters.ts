@@ -9,6 +9,7 @@ export function returnUsersWithTasks(
     const user = users[index];
     delete user.company;
     delete user.address;
+    delete user.website;
     for (const tIndex in tasks) {
       if (user.id == tasks[tIndex].userId) {
         if (user.tasks != undefined)
